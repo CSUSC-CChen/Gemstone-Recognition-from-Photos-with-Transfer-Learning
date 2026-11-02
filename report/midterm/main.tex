@@ -1,0 +1,212 @@
+%%%%%%%% CSCI 467 PROJECT MIDTERM REPORT %%%%%%%%
+%%%%%%%% Built on the CSCI 467 template (adapted from ICML 2021) %%%%%%%%
+%
+% Numbers, tables, and figures come from the results folder that
+% gemstone_midterm.ipynb produces. The report looks for it in two places:
+%   results/                  next to this file (e.g. on Overleaf)
+%   ../../results/midterm/    the repo layout (report/midterm/main.tex)
+
+\documentclass{article}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+\usepackage[accepted]{icml2021}
+
+% ---------- Results from the notebook ----------
+\IfFileExists{results/macros.tex}{\def\ResultsDir{results}}{%
+  \IfFileExists{../../results/midterm/macros.tex}{\def\ResultsDir{../../results/midterm}}{\def\ResultsDir{results}}}
+\IfFileExists{\ResultsDir/macros.tex}{\input{\ResultsDir/macros.tex}}{}
+\newcommand{\fillin}[1]{\textcolor{red}{[#1]}}
+\newcommand{\pending}{\fillin{run notebook}}
+\providecommand{\NClasses}{87}
+\providecommand{\NTrainFull}{\pending}\providecommand{\NTrain}{\pending}
+\providecommand{\NDev}{\pending}\providecommand{\NTest}{\pending}
+\providecommand{\TrainMin}{\pending}\providecommand{\TrainMax}{\pending}
+\providecommand{\TrainMed}{\pending}\providecommand{\TestMin}{\pending}
+\providecommand{\TestMax}{\pending}\providecommand{\DevErrors}{\pending}
+\providecommand{\ErrSampleN}{24}\providecommand{\ErrShownN}{16}\providecommand{\ErrTopFive}{\pending}
+\providecommand{\MajDev}{\pending}
+\providecommand{\LRDev}{\pending}\providecommand{\LRTest}{\pending}\providecommand{\LRC}{\pending}
+\providecommand{\RFDev}{\pending}\providecommand{\RFTest}{\pending}\providecommand{\RFTopFiveTest}{\pending}
+\providecommand{\RFTrees}{\pending}\providecommand{\RFLeaf}{\pending}
+\providecommand{\CNNDev}{\pending}\providecommand{\CNNTest}{\pending}
+\providecommand{\CNNTopFiveTest}{\pending}\providecommand{\CNNFOneTest}{\pending}
+\providecommand{\CNNLR}{\pending}\providecommand{\CNNJitter}{\pending}
+\providecommand{\CNNEpochs}{60}\providecommand{\CNNBestEpoch}{\pending}
+\providecommand{\CNNTrainAcc}{\pending}\providecommand{\CNNParams}{\pending}
+\providecommand{\CNNGap}{\pending}\providecommand{\FTGap}{\pending}\providecommand{\TrainMean}{\pending}
+\providecommand{\LinDev}{\pending}\providecommand{\LinTest}{\pending}
+\providecommand{\FTDev}{\pending}\providecommand{\FTTest}{\pending}
+\providecommand{\FTTopFiveTest}{\pending}\providecommand{\FTFOneTest}{\pending}
+\providecommand{\FTBackboneLR}{\pending}\providecommand{\FTEpochs}{25}\providecommand{\FTBestEpoch}{\pending}
+\providecommand{\LinEpochs}{15}\providecommand{\ErrModel}{the fine-tuned ResNet-50}
+
+% Includes a results file if it exists, otherwise prints a placeholder box.
+\newcommand{\resultinput}[1]{\IfFileExists{\ResultsDir/#1}{\input{\ResultsDir/#1}}{\fbox{\pending}}}
+\newcommand{\resultfig}[2]{\IfFileExists{\ResultsDir/#2}{\includegraphics[width=#1]{\ResultsDir/#2}}%
+  {\fbox{\parbox{0.9#1}{\centering\vspace{0.4in}\pending\\\texttt{\detokenize{results/#2}}\vspace{0.4in}}}}}
+
+% Let floats sit on pages with text instead of piling up at the end.
+\renewcommand{\topfraction}{0.9}\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\textfraction}{0.1}\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dblfloatpagefraction}{0.85}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Gemstone Recognition from Photos with Transfer Learning: Midterm Report}
+\icmltitlerunning{Gemstone Recognition: Midterm Report}
+
+\begin{icmlauthorlist}
+\icmlauthor{Cindy Chen}{}
+\end{icmlauthorlist}
+
+\vskip 0.3in
+]
+
+\ifdefined\QuickRunWarning
+  \textcolor{red}{\textbf{These numbers come from a QUICK smoke-test run. Rerun the notebook with QUICK = False.}}
+\fi
+
+\section{Introduction}
+
+This project builds a system that identifies a gemstone from a single photo. The input is an RGB image of one gemstone. The output is a predicted type out of \NClasses{} classes, such as amethyst, aquamarine, or alexandrite, together with the five most likely types, because many gems look alike. Identifying gems normally requires a trained gemologist with magnification and laboratory instruments. A photo-based tool could give buyers, sellers, and hobbyists a quick first check and flag cases that need an expert.
+
+\begin{figure*}[t]
+\centering
+\resultfig{\textwidth}{fig_class_counts.pdf}
+\caption{Images per class in the train and dev splits, sorted by training count.}
+\label{fig:counts}
+\end{figure*}
+
+\begin{table*}[t]
+\caption{Main results (\%). Hyperparameters were chosen by dev top-1 accuracy. F1 is macro-averaged. The best dev top-1 is in bold.}
+\label{tab:main}
+\vskip 0.1in
+\begin{center}
+\begin{small}
+\resultinput{table_main.tex}
+\end{small}
+\end{center}
+\vskip -0.1in
+\end{table*}
+
+\textbf{Response to proposal feedback.} The feedback warned that with only about 30 images per class, a CNN trained from scratch would likely overfit heavily, and advised relying on transfer learning. I made transfer learning the main method of this report, using an ImageNet-pretrained ResNet-50 \citep{he2016deep}. I also kept a small CNN trained from scratch as a controlled comparison, so the overfitting can be measured directly instead of assumed. The task definition is unchanged. All models are trained on the training split only, so every number comes from one fixed train/dev/test split.
+
+\textbf{Progress so far.} I built the full pipeline: data loading, a stratified train/dev split, two feature-based baselines, a CNN trained from scratch, and two transfer learning variants, all tuned on dev. On the test set, the best baseline (a Random Forest on color and texture features) reaches \RFTest\% top-1 accuracy, the scratch CNN \CNNTest\%, and the fine-tuned ResNet-50 \FTTest\%. Fine-tuning is the clear winner, about 10 test points above both the best baseline and the scratch CNN, and above the 72\% reported by \citet{freire2022gemstone} on the same 87 classes.
+
+\section{Related Work}
+
+The closest prior work on the same Kaggle images is \citet{chow2022gemstone}, who classified 68 of the categories. Their best model was a Random Forest \citep{breiman2001random} on an eight-bin RGB color histogram plus local binary patterns \citep{ojala2002multiresolution}. It reached 69.4\% accuracy and 96.5\% top-5 accuracy on 284 test images, while three expert gemologists scored between 42.6\% and 66.9\%. ResNets with only the final layer retrained did worse than the classical methods, which the authors attributed to the small training set.
+
+\citet{freire2022gemstone} used all 87 classes and fine-tuned the last 111 layers of an ImageNet-pretrained InceptionV3. Accuracy rose from 55\% with no pretraining or augmentation to 72\% with both, and pretraining helped more than augmentation. This agrees with the finding that pretrained features transfer best when later layers are adapted \citep{yosinski2014transferable}. \citet{judixon2023gemstone} reached about 98\% with a CNN trained from scratch, but on a private set of only 12 gem types with about 2,000 images per class. That gap mainly shows how strongly class count and images per class affect accuracy. Prior work also reports look-alike groups such as golden beryl, yellow sapphire, and chrysoberyl.
+
+These results use different class sets and test splits, so they cannot be compared directly. The two prior results on this data also disagree on whether pretrained networks help. This project compares classical features, a scratch CNN, and both a frozen and a fine-tuned pretrained network under one protocol, which can settle that question.
+
+\section{Dataset and Evaluation}
+
+\textbf{Data.} I use the Gemstones Images dataset on Kaggle \citep{lsind18gemstones}. It comes with a training folder of \NTrainFull{} images and a test folder of \NTest{} images, both organized into \NClasses{} class folders. Images were collected from the web, so their sizes, backgrounds, lighting, and cuts vary widely. Most show one cut stone on a plain background.
+
+\textbf{Splits.} I hold out a stratified 15\% of the training folder as a dev set, with a fixed random seed. This gives \NTrain{} training images and \NDev{} dev images, with every class present in both. The provided test folder is used once, after all choices are made on dev. Classes are close to balanced (Figure~\ref{fig:counts}). Training images per class range from \TrainMin{} to \TrainMax{} (median \TrainMed{}), and test images per class from \TestMin{} to \TestMax{}. With only about 4 dev images per class, dev scores are noisy, so I treat differences of a few points with caution.
+
+\textbf{Preprocessing.} Each image is resized along its short side and center-cropped to a $256\times256$ square, which keeps the stone's shape. Each model then takes its own crop: $128\times128$ for the scratch CNN and $224\times224$ for ResNet-50.
+
+\textbf{Metrics.} The main metric is top-1 accuracy, which suits a balanced multiclass task and matches prior work. Top-5 accuracy measures how useful the system is as a shortlist for an expert, which matters because some gems are hard to tell apart even for people. Macro-averaged F1 weights every class equally, so a model cannot score well by doing well only on easy classes.
+
+\section{Methods}
+
+Every learned method maps an image to a score for each class. The predicted class has the highest score, and the top five scores form the shortlist.
+
+\textbf{Majority class.} Always predicts the most common training class, which is close to chance (about 1.1\%).
+
+\textbf{Baseline 1: color histogram and logistic regression.} Each image is downsized to $96\times96$ and turned into a joint RGB histogram with 8 bins per channel (512 features), normalized to sum to 1. A square-root transform shrinks the very large bins that usually come from the background. Features are standardized and fed to multinomial logistic regression, with the inverse regularization strength $C$ chosen from $\{0.001, 0.01, 0.1, 1\}$ on dev ($C=\LRC$ was best).
+
+\textbf{Baseline 2: color and texture with a Random Forest.} This follows the best classical setup of \citet{chow2022gemstone}. The RGB histogram is joined by a hue and saturation histogram ($12\times4$ bins) and by uniform local binary pattern (LBP) histograms at three scales (radius 1, 2, and 3 with 8, 16, and 24 neighbors). LBP codes describe local texture such as facet edges and inclusions. The 614 features feed a Random Forest, with the number of trees and minimum leaf size tuned on dev (\RFTrees{} trees and minimum leaf size \RFLeaf{} were best).
+
+\textbf{Comparison: a small CNN trained from scratch.} Four blocks each apply two $3\times3$ convolutions with batch normalization and ReLU, then $2\times2$ max pooling, taking a $128\times128$ input to an $8\times8$ map with 256 channels. Global average pooling, dropout of 0.3, and a linear layer give the class scores (\CNNParams{}M parameters). It trains for \CNNEpochs{} epochs. I tune the peak learning rate over $\{10^{-3}, 3\times10^{-3}\}$ and whether to use color jitter (random brightness, contrast, saturation, and hue). Jitter usually helps small image datasets, but color is the main cue that separates many gems. The chosen setting was learning rate \CNNLR{} with jitter \CNNJitter{}.
+
+\textbf{Main method: transfer learning with ResNet-50.} I start from ResNet-50 pretrained on ImageNet and replace its 1000-way output layer with dropout of 0.3 and a new \NClasses{}-way linear layer. The pretrained layers already detect general features such as edges, color, and texture, so with little data the network only needs to adapt them. I train two variants:
+\begin{itemize}
+\item \textbf{Linear probe.} The whole pretrained network is frozen and only the new output layer is trained, for \LinEpochs{} epochs.
+\item \textbf{Partial fine-tuning.} The last two residual stages (\texttt{layer3} and \texttt{layer4}) are also trained, with a learning rate 10 times smaller than the output layer, so the pretrained features change gently. Earlier layers stay frozen. Training runs for \FTEpochs{} epochs, and the backbone learning rate is chosen from $\{10^{-4}, 3\times10^{-4}\}$ on dev (\FTBackboneLR{} was best).
+\end{itemize}
+Frozen layers keep their pretrained batch-normalization statistics.
+
+\textbf{Training details.} All networks minimize cross-entropy with label smoothing of 0.1, using AdamW, a one-cycle learning-rate schedule, and mixed precision on a Colab T4 GPU. Augmentation uses random resized crops covering 60\% to 100\% of the image, horizontal and vertical flips, and rotations up to 30 degrees, since a stone looks the same upside down. For each run I keep the epoch with the best dev accuracy.
+
+\begin{table}[t]
+\caption{Dev-set tuning runs (\%). For each method, the setting with the highest top-1 is used in Table~\ref{tab:main}.}
+\label{tab:sweep}
+\vskip 0.1in
+\begin{center}
+\begin{scriptsize}
+\resultinput{table_sweep.tex}
+\end{scriptsize}
+\end{center}
+\vskip -0.1in
+\end{table}
+
+\section{Experiments}
+
+Table~\ref{tab:main} gives the main results and Table~\ref{tab:sweep} the dev-set tuning runs. Every method except the majority baseline is far above chance. The Random Forest reaches \RFDev\% dev and \RFTest\% test accuracy, against \LRDev\% and \LRTest\% for color-only logistic regression. Adding hue and texture features helps clearly, by 5.3 points on dev and 8.5 points on test, so color alone cannot separate many gems.
+
+\textbf{Overfitting.} Figure~\ref{fig:curves} compares training and dev accuracy for the scratch CNN and the fine-tuned ResNet-50. The result differs from what the proposal feedback predicted. Over the last five epochs, the scratch CNN's training accuracy exceeds its dev accuracy by only \CNNGap{} points, and both curves were still rising slowly at epoch \CNNEpochs{}. With strong augmentation, label smoothing, and dropout, the scratch CNN underfits instead of overfitting. The fine-tuned ResNet-50 is the model that memorizes: it passes 97\% training accuracy by epoch 10 and nearly 100\% soon after, a gap of \FTGap{} points, while its dev accuracy levels off near 82\%. Training accuracy is measured on augmented images, so it slightly understates how well each model fits the clean training set. Even so, the feedback's advice holds, because the fine-tuned model generalizes far better despite fitting the training set much more tightly. The scratch CNN reaches \CNNDev\% dev and \CNNTest\% test accuracy, tying the Random Forest on test.
+
+\textbf{Transfer learning.} The linear probe reaches \LinDev\% dev and \LinTest\% test accuracy using only frozen ImageNet features. Fine-tuning the last two stages raises this to \FTDev\% dev and \FTTest\% test, with \FTTopFiveTest\% top-5 accuracy and \FTFOneTest\% macro F1. Frozen ImageNet features alone do worse than the Random Forest (\LinTest\% against \RFTest\% on test), which matches the weak frozen ResNets reported by \citet{chow2022gemstone}. Adapting the last two stages adds about 14 test points, consistent with the large gains from fine-tuning in \citet{freire2022gemstone}. This may explain why the two papers disagree. A likely reason is that ImageNet's later layers are tuned to object categories, which say little about gem color and texture, so they need retraining for this task, while early layers that detect edges and color transfer as they are \citep{yosinski2014transferable}.
+
+Color jitter slightly helped the scratch CNN (74.4\% against 73.4\% at learning rate 0.001), though one dev image is worth 0.23 points, so this difference is within noise. My best test accuracy of \FTTest\% is above the 72\% of \citet{freire2022gemstone}, who fine-tuned more layers of InceptionV3. The comparison is approximate, because their split may differ from mine. Test accuracy is 2 to 7 points below dev accuracy for every learned method. This is expected, because hyperparameters and epochs were chosen on dev, and the test set has only about 4 images per class.
+
+\begin{figure}[t]
+\centering
+\resultfig{\columnwidth}{fig_curves.pdf}
+\caption{Top-1 accuracy during training, on augmented training batches and on the dev set, for the scratch CNN (left) and the fine-tuned ResNet-50 (right).}
+\label{fig:curves}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\resultfig{\textwidth}{fig_errors.pdf}
+\caption{\ErrShownN{} of the \ErrSampleN{} randomly sampled dev errors of \ErrModel{}. T is the true class and P the prediction.}
+\label{fig:errors}
+\end{figure*}
+
+\section{Discussion}
+
+To understand the remaining mistakes, I took a random sample of \ErrSampleN{} of the \DevErrors{} dev errors made by \ErrModel{}, the learned model with the best dev accuracy, and studied each one. Figure~\ref{fig:errors} shows \ErrShownN{} of them. In \ErrTopFive\% of the sampled errors the true class was still among the top five predictions, so many mistakes are near misses. Table~\ref{tab:confused} lists the most often confused class pairs.
+
+Three patterns stand out. First, most confident errors are look-alike stones with the same color: pale blue aquamarine and kyanite predicted as topaz, violet iolite as purple sapphire or benitoite, and yellow-green chrysoberyl as grossular. These pairs are hard even for experts, who use refractive index and other instrument readings that a photo cannot show. Second, many errors fall inside one mineral family. Almandine, pyrope, spessartite, grossular, and andradite are all garnet species, and the dataset also has a separate Garnet Red class and grossular varieties (tsavorite and hessonite). Five of the 24 sampled errors confuse two garnet labels, and almandine against pyrope is among the most frequent confusions (Table~\ref{tab:confused}), so some mistakes come from overlapping labels, not only from the model. Blue lace agate predicted as blue chalcedony is a similar case, since blue lace agate is a banded chalcedony. Third, the least confident errors are mostly opaque or unusual stones, such as a yellow aventurine sphere, a rhodochrosite cabochon, and a druzy pyrite, where the model is unsure rather than confidently wrong. Backgrounds are mostly plain gray or white and do not seem to mislead the model, but a few misclassified stones fill only a small part of the image. The Random Forest also got 21 of these 24 examples wrong, so they are hard for both kinds of features.
+
+Based on this analysis, I plan two concrete improvements for the final report.
+
+\textbf{Deeper fine-tuning with stronger regularization.} Since adapting \texttt{layer3} and \texttt{layer4} added 14 points, I will unfreeze the full network with smaller learning rates for earlier layers. Because the fine-tuned model already reaches nearly 100\% training accuracy, I will pair this with stronger regularization, such as mixup and heavier weight decay, to shrink the \FTGap{}-point gap.
+
+\textbf{Focusing on the stone.} A few misclassified stones fill only a small part of the photo, so most of the $224\times224$ input is background, and the color and facet details that separate look-alike gems cover few pixels. Cropping to the stone using a bounding box from simple thresholding, together with higher input resolution, should give the model more detail where it matters. For overlapping garnet labels, I will also report accuracy with the garnet species merged, to separate model errors from label overlap.
+
+I will also try test-time augmentation (averaging predictions over flips and rotations), and report results on the 68-class subset used by \citet{chow2022gemstone} for a direct comparison. Finally, I will build a small real-world test set from my own photos of stones on display in the Robert Procop Gem and Mineral Hall at the Natural History Museum of Los Angeles County and from my personal collection. It will cover classes such as peridot, sapphire, spinel, opal, and several garnet species, with both faceted and rough specimens, to test whether the model generalizes beyond web images.
+
+\begin{table}[t]
+\caption{Class pairs most often confused on dev by \ErrModel{}, counting errors in both directions.}
+\label{tab:confused}
+\vskip 0.1in
+\begin{center}
+\begin{small}
+\resultinput{table_confused.tex}
+\end{small}
+\end{center}
+\vskip -0.1in
+\end{table}
+
+\section{Conclusion}
+
+Following the proposal feedback, I made transfer learning the main method. The pipeline now covers a fixed train/dev/test split, two feature-based baselines, a scratch CNN that measures overfitting directly, and a pretrained ResNet-50 used both frozen and partially fine-tuned, all tuned on dev. The best baseline reaches \RFTest\% test accuracy, the scratch CNN \CNNTest\%, and the fine-tuned ResNet-50 \FTTest\%. Before the final report I will fine-tune the full network with stronger regularization, test cropping to the stone and higher resolution, add test-time augmentation, and compare against prior work on the 68-class subset.
+
+\bibliography{main}
+\bibliographystyle{icml2021}
+
+\end{document}

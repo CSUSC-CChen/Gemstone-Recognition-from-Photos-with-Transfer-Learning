@@ -1,0 +1,11 @@
+# Tested on Google Colab with a T4 GPU (October 2026). Colab already includes most of these.
+# The notebook writes the exact versions it ran with to results/<stage>/environment.txt.
+torch>=2.4
+torchvision>=0.19
+numpy
+pandas
+scikit-learn>=1.3
+scikit-image>=0.22
+pillow
+matplotlib
+kagglehub

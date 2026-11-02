@@ -1,0 +1,13 @@
+\begin{tabular}{lccc|ccc}
+\toprule
+ & \multicolumn{3}{c|}{Dev} & \multicolumn{3}{c}{Test} \\
+Method & Top-1 & Top-5 & F1 & Top-1 & Top-5 & F1 \\
+\midrule
+Majority class & 1.6 & 7.2 & 0.0 & 1.4 & 6.9 & 0.0 \\
+LogReg (color) & 68.1 & 91.8 & 67.5 & 61.2 & 90.1 & 59.1 \\
+RF (color + LBP) & 73.4 & 94.2 & 72.6 & 69.7 & 95.0 & 68.1 \\
+Small CNN & 74.4 & 96.7 & 72.2 & 69.7 & 95.3 & 69.0 \\
+ResNet-50 (linear probe) & 66.9 & 90.4 & 66.4 & 65.3 & 90.1 & 63.6 \\
+ResNet-50 (fine-tuned) & \textbf{82.5} & 97.0 & 81.8 & 79.6 & 96.1 & 79.4 \\
+\bottomrule
+\end{tabular}
