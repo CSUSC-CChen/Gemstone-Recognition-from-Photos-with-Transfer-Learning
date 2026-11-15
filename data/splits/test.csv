@@ -1,0 +1,364 @@
+path,label
+test/Alexandrite/alexandrite_18.jpg,Alexandrite
+test/Alexandrite/alexandrite_28.jpg,Alexandrite
+test/Alexandrite/alexandrite_3.jpg,Alexandrite
+test/Alexandrite/alexandrite_6.jpg,Alexandrite
+test/Almandine/almandine_18.jpg,Almandine
+test/Almandine/almandine_28.jpg,Almandine
+test/Almandine/almandine_3.jpg,Almandine
+test/Almandine/almandine_9.jpg,Almandine
+test/Amazonite/amazonite_18.jpg,Amazonite
+test/Amazonite/amazonite_28.jpg,Amazonite
+test/Amazonite/amazonite_3.jpg,Amazonite
+test/Amazonite/amazonite_8.jpg,Amazonite
+test/Amber/amber_18.jpg,Amber
+test/Amber/amber_28.jpg,Amber
+test/Amber/amber_3.jpg,Amber
+test/Amber/amber_9.jpg,Amber
+test/Amethyst/amethyst_18.jpg,Amethyst
+test/Amethyst/amethyst_3.jpg,Amethyst
+test/Amethyst/amethyst_5.jpg,Amethyst
+test/Amethyst/amethyst_7.jpg,Amethyst
+test/Ametrine/ametrine_18.jpg,Ametrine
+test/Ametrine/ametrine_3.jpg,Ametrine
+test/Ametrine/ametrine_5.jpg,Ametrine
+test/Ametrine/ametrine_7.jpg,Ametrine
+test/Andalusite/andalusite_18.jpg,Andalusite
+test/Andalusite/andalusite_28.jpg,Andalusite
+test/Andalusite/andalusite_3.jpg,Andalusite
+test/Andalusite/andalusite_8.jpg,Andalusite
+test/Andradite/andradite_18.jpg,Andradite
+test/Andradite/andradite_28.jpg,Andradite
+test/Andradite/andradite_3.jpg,Andradite
+test/Andradite/andradite_9.jpg,Andradite
+test/Aquamarine/aquamarine_18.jpg,Aquamarine
+test/Aquamarine/aquamarine_3.jpg,Aquamarine
+test/Aquamarine/aquamarine_4.jpg,Aquamarine
+test/Aquamarine/aquamarine_5.jpg,Aquamarine
+test/Aquamarine/aquamarine_8.jpg,Aquamarine
+test/Aventurine Green/aventurine green_3.jpg,Aventurine Green
+test/Aventurine Green/aventurine green_4.jpg,Aventurine Green
+test/Aventurine Green/aventurine green_41.jpg,Aventurine Green
+test/Aventurine Green/aventurine green_44.jpg,Aventurine Green
+test/Aventurine Green/aventurine green_5.jpg,Aventurine Green
+test/Aventurine Yellow/aventurine yellow_18.jpg,Aventurine Yellow
+test/Aventurine Yellow/aventurine yellow_28.jpg,Aventurine Yellow
+test/Aventurine Yellow/aventurine yellow_3.jpg,Aventurine Yellow
+test/Aventurine Yellow/aventurine yellow_6.jpg,Aventurine Yellow
+test/Benitoite/benitoite_18.jpg,Benitoite
+test/Benitoite/benitoite_28.jpg,Benitoite
+test/Benitoite/benitoite_3.jpg,Benitoite
+test/Benitoite/benitoite_9.jpg,Benitoite
+test/Beryl Golden/beryl golden_3.jpg,Beryl Golden
+test/Beryl Golden/beryl golden_4.jpg,Beryl Golden
+test/Beryl Golden/beryl golden_6.jpg,Beryl Golden
+test/Beryl Golden/beryl golden_9.jpg,Beryl Golden
+test/Bixbite/bixbite_3.jpg,Bixbite
+test/Bixbite/bixbite_4.jpg,Bixbite
+test/Bixbite/bixbite_6.jpg,Bixbite
+test/Bixbite/bixbite_9.jpg,Bixbite
+test/Bloodstone/bloodstone_18.jpg,Bloodstone
+test/Bloodstone/bloodstone_3.jpg,Bloodstone
+test/Bloodstone/bloodstone_5.jpg,Bloodstone
+test/Bloodstone/bloodstone_7.jpg,Bloodstone
+test/Blue Lace Agate/blue lace agate_3.jpg,Blue Lace Agate
+test/Blue Lace Agate/blue lace agate_4.jpg,Blue Lace Agate
+test/Blue Lace Agate/blue lace agate_41.jpg,Blue Lace Agate
+test/Blue Lace Agate/blue lace agate_5.jpg,Blue Lace Agate
+test/Blue Lace Agate/blue lace agate_7.jpg,Blue Lace Agate
+test/Carnelian/carnelian_18.jpg,Carnelian
+test/Carnelian/carnelian_28.jpg,Carnelian
+test/Carnelian/carnelian_3.jpg,Carnelian
+test/Carnelian/carnelian_7.jpg,Carnelian
+test/Cats Eye/cats eye_18.jpg,Cats Eye
+test/Cats Eye/cats eye_28.jpg,Cats Eye
+test/Cats Eye/cats eye_3.jpg,Cats Eye
+test/Cats Eye/cats eye_9.jpg,Cats Eye
+test/Chalcedony/chalcedony_18.jpg,Chalcedony
+test/Chalcedony/chalcedony_2.jpg,Chalcedony
+test/Chalcedony/chalcedony_28.jpg,Chalcedony
+test/Chalcedony/chalcedony_3.jpg,Chalcedony
+test/Chalcedony Blue/chalcedony blue_18.jpg,Chalcedony Blue
+test/Chalcedony Blue/chalcedony blue_2.jpg,Chalcedony Blue
+test/Chalcedony Blue/chalcedony blue_28.jpg,Chalcedony Blue
+test/Chalcedony Blue/chalcedony blue_3.jpg,Chalcedony Blue
+test/Chrome Diopside/chrome diopside_18.jpg,Chrome Diopside
+test/Chrome Diopside/chrome diopside_28.jpg,Chrome Diopside
+test/Chrome Diopside/chrome diopside_3.jpg,Chrome Diopside
+test/Chrome Diopside/chrome diopside_8.jpg,Chrome Diopside
+test/Chrysoberyl/chrysoberyl_18.jpg,Chrysoberyl
+test/Chrysoberyl/chrysoberyl_28.jpg,Chrysoberyl
+test/Chrysoberyl/chrysoberyl_3.jpg,Chrysoberyl
+test/Chrysoberyl/chrysoberyl_9.jpg,Chrysoberyl
+test/Chrysocolla/chrysocolla_3.jpg,Chrysocolla
+test/Chrysocolla/chrysocolla_4.jpg,Chrysocolla
+test/Chrysocolla/chrysocolla_6.jpg,Chrysocolla
+test/Chrysocolla/chrysocolla_9.jpg,Chrysocolla
+test/Chrysoprase/chrysoprase_18.jpg,Chrysoprase
+test/Chrysoprase/chrysoprase_2.jpg,Chrysoprase
+test/Chrysoprase/chrysoprase_28.jpg,Chrysoprase
+test/Chrysoprase/chrysoprase_3.jpg,Chrysoprase
+test/Citrine/citrine_3.jpg,Citrine
+test/Citrine/citrine_4.jpg,Citrine
+test/Citrine/citrine_41.jpg,Citrine
+test/Citrine/citrine_42.jpg,Citrine
+test/Citrine/citrine_44.jpg,Citrine
+test/Coral/coral_18.jpg,Coral
+test/Coral/coral_28.jpg,Coral
+test/Coral/coral_3.jpg,Coral
+test/Coral/coral_9.jpg,Coral
+test/Danburite/danburite_18.jpg,Danburite
+test/Danburite/danburite_28.jpg,Danburite
+test/Danburite/danburite_3.jpg,Danburite
+test/Danburite/danburite_8.jpg,Danburite
+test/Diamond/diamond_18.jpg,Diamond
+test/Diamond/diamond_28.jpg,Diamond
+test/Diamond/diamond_3.jpg,Diamond
+test/Diamond/diamond_9.jpg,Diamond
+test/Diaspore/diaspore_18.jpg,Diaspore
+test/Diaspore/diaspore_28.jpg,Diaspore
+test/Diaspore/diaspore_3.jpg,Diaspore
+test/Diaspore/diaspore_9.jpg,Diaspore
+test/Dumortierite/dumortierite_18.jpg,Dumortierite
+test/Dumortierite/dumortierite_28.jpg,Dumortierite
+test/Dumortierite/dumortierite_3.jpg,Dumortierite
+test/Dumortierite/dumortierite_8.jpg,Dumortierite
+test/Emerald/emerald_18.jpg,Emerald
+test/Emerald/emerald_3.jpg,Emerald
+test/Emerald/emerald_4.jpg,Emerald
+test/Emerald/emerald_5.jpg,Emerald
+test/Emerald/emerald_8.jpg,Emerald
+test/Fluorite/fluorite_18.jpg,Fluorite
+test/Fluorite/fluorite_28.jpg,Fluorite
+test/Fluorite/fluorite_3.jpg,Fluorite
+test/Fluorite/fluorite_8.jpg,Fluorite
+test/Garnet Red/garnet red_3.jpg,Garnet Red
+test/Garnet Red/garnet red_4.jpg,Garnet Red
+test/Garnet Red/garnet red_6.jpg,Garnet Red
+test/Garnet Red/garnet red_9.jpg,Garnet Red
+test/Goshenite/goshenite_18.jpg,Goshenite
+test/Goshenite/goshenite_28.jpg,Goshenite
+test/Goshenite/goshenite_3.jpg,Goshenite
+test/Goshenite/goshenite_9.jpg,Goshenite
+test/Grossular/grossular_18.jpg,Grossular
+test/Grossular/grossular_3.jpg,Grossular
+test/Grossular/grossular_30.jpg,Grossular
+test/Grossular/grossular_32.jpg,Grossular
+test/Hessonite/hessonite_18.jpg,Hessonite
+test/Hessonite/hessonite_2.jpg,Hessonite
+test/Hessonite/hessonite_28.jpg,Hessonite
+test/Hessonite/hessonite_3.jpg,Hessonite
+test/Hiddenite/hiddenite_18.jpg,Hiddenite
+test/Hiddenite/hiddenite_3.jpg,Hiddenite
+test/Hiddenite/hiddenite_30.jpg,Hiddenite
+test/Hiddenite/hiddenite_32.jpg,Hiddenite
+test/Iolite/iolite_18.jpg,Iolite
+test/Iolite/iolite_28.jpg,Iolite
+test/Iolite/iolite_3.jpg,Iolite
+test/Iolite/iolite_8.jpg,Iolite
+test/Jade/jade_25.jpg,Jade
+test/Jade/jade_3.jpg,Jade
+test/Jade/jade_8.jpg,Jade
+test/Jade/jade_9.jpg,Jade
+test/Jasper/jasper_18.jpg,Jasper
+test/Jasper/jasper_3.jpg,Jasper
+test/Jasper/jasper_4.jpg,Jasper
+test/Jasper/jasper_5.jpg,Jasper
+test/Jasper/jasper_8.jpg,Jasper
+test/Kunzite/kunzite_18.jpg,Kunzite
+test/Kunzite/kunzite_28.jpg,Kunzite
+test/Kunzite/kunzite_3.jpg,Kunzite
+test/Kunzite/kunzite_8.jpg,Kunzite
+test/Kyanite/kyanite_18.jpg,Kyanite
+test/Kyanite/kyanite_3.jpg,Kyanite
+test/Kyanite/kyanite_30.jpg,Kyanite
+test/Kyanite/kyanite_32.jpg,Kyanite
+test/Labradorite/labradorite_3.jpg,Labradorite
+test/Labradorite/labradorite_4.jpg,Labradorite
+test/Labradorite/labradorite_41.jpg,Labradorite
+test/Labradorite/labradorite_42.jpg,Labradorite
+test/Labradorite/labradorite_44.jpg,Labradorite
+test/Lapis Lazuli/lapis lazuli_18.jpg,Lapis Lazuli
+test/Lapis Lazuli/lapis lazuli_28.jpg,Lapis Lazuli
+test/Lapis Lazuli/lapis lazuli_3.jpg,Lapis Lazuli
+test/Lapis Lazuli/lapis lazuli_9.jpg,Lapis Lazuli
+test/Larimar/larimar_24.jpg,Larimar
+test/Larimar/larimar_26.jpg,Larimar
+test/Larimar/larimar_29.jpg,Larimar
+test/Larimar/larimar_8.jpg,Larimar
+test/Malachite/malachite_25.jpg,Malachite
+test/Malachite/malachite_3.jpg,Malachite
+test/Malachite/malachite_8.jpg,Malachite
+test/Malachite/malachite_9.jpg,Malachite
+test/Moonstone/moonstone_18.jpg,Moonstone
+test/Moonstone/moonstone_3.jpg,Moonstone
+test/Moonstone/moonstone_4.jpg,Moonstone
+test/Moonstone/moonstone_5.jpg,Moonstone
+test/Moonstone/moonstone_8.jpg,Moonstone
+test/Morganite/morganite_18.jpg,Morganite
+test/Morganite/morganite_28.jpg,Morganite
+test/Morganite/morganite_3.jpg,Morganite
+test/Morganite/morganite_9.jpg,Morganite
+test/Onyx Black/onyx black_25.jpg,Onyx Black
+test/Onyx Black/onyx black_3.jpg,Onyx Black
+test/Onyx Black/onyx black_8.jpg,Onyx Black
+test/Onyx Black/onyx black_9.jpg,Onyx Black
+test/Onyx Green/onyx green_25.jpg,Onyx Green
+test/Onyx Green/onyx green_3.jpg,Onyx Green
+test/Onyx Green/onyx green_8.jpg,Onyx Green
+test/Onyx Green/onyx green_9.jpg,Onyx Green
+test/Onyx Red/onyx red_25.jpg,Onyx Red
+test/Onyx Red/onyx red_3.jpg,Onyx Red
+test/Onyx Red/onyx red_8.jpg,Onyx Red
+test/Onyx Red/onyx red_9.jpg,Onyx Red
+test/Opal/opal_18.jpg,Opal
+test/Opal/opal_3.jpg,Opal
+test/Opal/opal_4.jpg,Opal
+test/Opal/opal_5.jpg,Opal
+test/Opal/opal_8.jpg,Opal
+test/Pearl/pearl_18.jpg,Pearl
+test/Pearl/pearl_28.jpg,Pearl
+test/Pearl/pearl_3.jpg,Pearl
+test/Pearl/pearl_7.jpg,Pearl
+test/Peridot/peridot_3.jpg,Peridot
+test/Peridot/peridot_4.jpg,Peridot
+test/Peridot/peridot_41.jpg,Peridot
+test/Peridot/peridot_42.jpg,Peridot
+test/Peridot/peridot_5.jpg,Peridot
+test/Prehnite/prehnite_3.jpg,Prehnite
+test/Prehnite/prehnite_4.jpg,Prehnite
+test/Prehnite/prehnite_41.jpg,Prehnite
+test/Prehnite/prehnite_5.jpg,Prehnite
+test/Prehnite/prehnite_7.jpg,Prehnite
+test/Pyrite/pyrite_3.jpg,Pyrite
+test/Pyrite/pyrite_4.jpg,Pyrite
+test/Pyrite/pyrite_41.jpg,Pyrite
+test/Pyrite/pyrite_44.jpg,Pyrite
+test/Pyrite/pyrite_7.jpg,Pyrite
+test/Pyrope/pyrope_18.jpg,Pyrope
+test/Pyrope/pyrope_28.jpg,Pyrope
+test/Pyrope/pyrope_3.jpg,Pyrope
+test/Pyrope/pyrope_9.jpg,Pyrope
+test/Quartz Beer/quartz beer_18.jpg,Quartz Beer
+test/Quartz Beer/quartz beer_3.jpg,Quartz Beer
+test/Quartz Beer/quartz beer_5.jpg,Quartz Beer
+test/Quartz Beer/quartz beer_7.jpg,Quartz Beer
+test/Quartz Lemon/quartz lemon_18.jpg,Quartz Lemon
+test/Quartz Lemon/quartz lemon_28.jpg,Quartz Lemon
+test/Quartz Lemon/quartz lemon_3.jpg,Quartz Lemon
+test/Quartz Lemon/quartz lemon_7.jpg,Quartz Lemon
+test/Quartz Rose/quartz rose_18.jpg,Quartz Rose
+test/Quartz Rose/quartz rose_3.jpg,Quartz Rose
+test/Quartz Rose/quartz rose_5.jpg,Quartz Rose
+test/Quartz Rose/quartz rose_7.jpg,Quartz Rose
+test/Quartz Rutilated/quartz rutilated_3.jpg,Quartz Rutilated
+test/Quartz Rutilated/quartz rutilated_4.jpg,Quartz Rutilated
+test/Quartz Rutilated/quartz rutilated_41.jpg,Quartz Rutilated
+test/Quartz Rutilated/quartz rutilated_42.jpg,Quartz Rutilated
+test/Quartz Rutilated/quartz rutilated_6.jpg,Quartz Rutilated
+test/Quartz Smoky/quartz smoky_18.jpg,Quartz Smoky
+test/Quartz Smoky/quartz smoky_2.jpg,Quartz Smoky
+test/Quartz Smoky/quartz smoky_28.jpg,Quartz Smoky
+test/Quartz Smoky/quartz smoky_3.jpg,Quartz Smoky
+test/Rhodochrosite/rhodochrosite_18.jpg,Rhodochrosite
+test/Rhodochrosite/rhodochrosite_3.jpg,Rhodochrosite
+test/Rhodochrosite/rhodochrosite_30.jpg,Rhodochrosite
+test/Rhodochrosite/rhodochrosite_32.jpg,Rhodochrosite
+test/Rhodolite/rhodolite_3.jpg,Rhodolite
+test/Rhodolite/rhodolite_4.jpg,Rhodolite
+test/Rhodolite/rhodolite_6.jpg,Rhodolite
+test/Rhodolite/rhodolite_9.jpg,Rhodolite
+test/Rhodonite/rhodonite_18.jpg,Rhodonite
+test/Rhodonite/rhodonite_28.jpg,Rhodonite
+test/Rhodonite/rhodonite_3.jpg,Rhodonite
+test/Rhodonite/rhodonite_8.jpg,Rhodonite
+test/Ruby/ruby_18.jpg,Ruby
+test/Ruby/ruby_3.jpg,Ruby
+test/Ruby/ruby_5.jpg,Ruby
+test/Ruby/ruby_7.jpg,Ruby
+test/Sapphire Blue/sapphire blue_18.jpg,Sapphire Blue
+test/Sapphire Blue/sapphire blue_28.jpg,Sapphire Blue
+test/Sapphire Blue/sapphire blue_3.jpg,Sapphire Blue
+test/Sapphire Blue/sapphire blue_6.jpg,Sapphire Blue
+test/Sapphire Pink/sapphire pink_18.jpg,Sapphire Pink
+test/Sapphire Pink/sapphire pink_2.jpg,Sapphire Pink
+test/Sapphire Pink/sapphire pink_28.jpg,Sapphire Pink
+test/Sapphire Pink/sapphire pink_3.jpg,Sapphire Pink
+test/Sapphire Purple/sapphire purple_18.jpg,Sapphire Purple
+test/Sapphire Purple/sapphire purple_28.jpg,Sapphire Purple
+test/Sapphire Purple/sapphire purple_3.jpg,Sapphire Purple
+test/Sapphire Purple/sapphire purple_9.jpg,Sapphire Purple
+test/Sapphire Yellow/sapphire yellow_18.jpg,Sapphire Yellow
+test/Sapphire Yellow/sapphire yellow_28.jpg,Sapphire Yellow
+test/Sapphire Yellow/sapphire yellow_3.jpg,Sapphire Yellow
+test/Sapphire Yellow/sapphire yellow_9.jpg,Sapphire Yellow
+test/Scapolite/scapolite_25.jpg,Scapolite
+test/Scapolite/scapolite_3.jpg,Scapolite
+test/Scapolite/scapolite_8.jpg,Scapolite
+test/Scapolite/scapolite_9.jpg,Scapolite
+test/Serpentine/serpentine_18.jpg,Serpentine
+test/Serpentine/serpentine_2.jpg,Serpentine
+test/Serpentine/serpentine_28.jpg,Serpentine
+test/Serpentine/serpentine_3.jpg,Serpentine
+test/Sodalite/sodalite_18.jpg,Sodalite
+test/Sodalite/sodalite_3.jpg,Sodalite
+test/Sodalite/sodalite_5.jpg,Sodalite
+test/Sodalite/sodalite_7.jpg,Sodalite
+test/Spessartite/spessartite_18.jpg,Spessartite
+test/Spessartite/spessartite_2.jpg,Spessartite
+test/Spessartite/spessartite_28.jpg,Spessartite
+test/Spessartite/spessartite_3.jpg,Spessartite
+test/Sphene/sphene_18.jpg,Sphene
+test/Sphene/sphene_2.jpg,Sphene
+test/Sphene/sphene_28.jpg,Sphene
+test/Sphene/sphene_3.jpg,Sphene
+test/Spinel/spinel_25.jpg,Spinel
+test/Spinel/spinel_3.jpg,Spinel
+test/Spinel/spinel_8.jpg,Spinel
+test/Spinel/spinel_9.jpg,Spinel
+test/Spodumene/spodumene_18.jpg,Spodumene
+test/Spodumene/spodumene_3.jpg,Spodumene
+test/Spodumene/spodumene_5.jpg,Spodumene
+test/Spodumene/spodumene_7.jpg,Spodumene
+test/Sunstone/sunstone_18.jpg,Sunstone
+test/Sunstone/sunstone_3.jpg,Sunstone
+test/Sunstone/sunstone_30.jpg,Sunstone
+test/Sunstone/sunstone_32.jpg,Sunstone
+test/Tanzanite/tanzanite_3.jpg,Tanzanite
+test/Tanzanite/tanzanite_4.jpg,Tanzanite
+test/Tanzanite/tanzanite_6.jpg,Tanzanite
+test/Tanzanite/tanzanite_9.jpg,Tanzanite
+test/Tigers Eye/tigers eye_3.jpg,Tigers Eye
+test/Tigers Eye/tigers eye_4.jpg,Tigers Eye
+test/Tigers Eye/tigers eye_41.jpg,Tigers Eye
+test/Tigers Eye/tigers eye_44.jpg,Tigers Eye
+test/Tigers Eye/tigers eye_7.jpg,Tigers Eye
+test/Topaz/topaz_18.jpg,Topaz
+test/Topaz/topaz_28.jpg,Topaz
+test/Topaz/topaz_3.jpg,Topaz
+test/Topaz/topaz_6.jpg,Topaz
+test/Tourmaline/tourmaline_3.jpg,Tourmaline
+test/Tourmaline/tourmaline_4.jpg,Tourmaline
+test/Tourmaline/tourmaline_41.jpg,Tourmaline
+test/Tourmaline/tourmaline_42.jpg,Tourmaline
+test/Tourmaline/tourmaline_6.jpg,Tourmaline
+test/Tsavorite/tsavorite_18.jpg,Tsavorite
+test/Tsavorite/tsavorite_28.jpg,Tsavorite
+test/Tsavorite/tsavorite_3.jpg,Tsavorite
+test/Tsavorite/tsavorite_9.jpg,Tsavorite
+test/Turquoise/turquoise_18.jpg,Turquoise
+test/Turquoise/turquoise_28.jpg,Turquoise
+test/Turquoise/turquoise_3.jpg,Turquoise
+test/Turquoise/turquoise_8.jpg,Turquoise
+test/Variscite/variscite_18.jpg,Variscite
+test/Variscite/variscite_2.jpg,Variscite
+test/Variscite/variscite_28.jpg,Variscite
+test/Variscite/variscite_3.jpg,Variscite
+test/Zircon/zircon_18.jpg,Zircon
+test/Zircon/zircon_28.jpg,Zircon
+test/Zircon/zircon_3.jpg,Zircon
+test/Zircon/zircon_7.jpg,Zircon
+test/Zoisite/zoisite_25.jpg,Zoisite
+test/Zoisite/zoisite_3.jpg,Zoisite
+test/Zoisite/zoisite_8.jpg,Zoisite
+test/Zoisite/zoisite_9.jpg,Zoisite
