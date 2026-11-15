@@ -31,3 +31,9 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+#raw photos
+data/museum/raw/
+data/museum/viewpoint/
+data/museum/reference/
+data/museum/cards/

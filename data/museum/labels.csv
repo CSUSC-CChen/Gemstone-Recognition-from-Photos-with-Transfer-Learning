@@ -1,1 +1,58 @@
 file,object_id,display_label,kaggle_class,type,source,notes
+topaz_museum01_faceted_a01.jpg,topaz_museum01,"618 ct topaz, Brazil",Topaz,faceted,museum,
+topaz_museum02_faceted_a01.jpg,topaz_museum02,100 ct topaz,Topaz,faceted,museum,NHMLAC 21134; top view
+topaz_museum02_faceted_a02.jpg,topaz_museum02,100 ct topaz,Topaz,faceted,museum,NHMLAC 21134; angled
+topaz_museum03_faceted_a01.jpg,topaz_museum03,15.62 ct sherry topaz,Topaz,faceted,museum,
+topaz_museum04_faceted_a01.jpg,topaz_museum04,15.54 ct golden topaz,Topaz,faceted,museum,
+topaz_museum05_faceted_a01.jpg,topaz_museum05,10.15 ct pink topaz,Topaz,faceted,museum,looks purple
+topaz_museum06_faceted_a01.jpg,topaz_museum06,408 ct topaz,Topaz,faceted,museum,
+peridot_museum01_faceted_a01.jpg,peridot_museum01,"122.55 ct peridot, Zabargad",Peridot,faceted,museum,
+peridot_museum02_faceted_a01.jpg,peridot_museum02,"13.94 ct peridot, Norway",Peridot,faceted,museum,
+peridot_museum03_faceted_a01.jpg,peridot_museum03,"45.03 ct peridot, Myanmar",Peridot,faceted,museum,
+peridot_museum04_faceted_a01.jpg,peridot_museum04,231 ct peridot,Peridot,faceted,museum,LACM 41824; same stone as first-visit cushion
+zircon_museum01_faceted_a01.jpg,zircon_museum01,90 ct zircon,Zircon,faceted,museum,NHMLAC 8105
+zircon_museum02_faceted_a01.jpg,zircon_museum02,31.30 ct yellow zircon,Zircon,faceted,museum,looks golden-brown
+zircon_museum03_faceted_a01.jpg,zircon_museum03,15.66 ct green zircon,Zircon,faceted,museum,"very dark, table glare"
+zircon_museum04_faceted_a01.jpg,zircon_museum04,24.23 ct brown zircon,Zircon,faceted,museum,"very dark, looks olive"
+zircon_museum05_faceted_a01.jpg,zircon_museum05,34.32 ct brown zircon,Zircon,faceted,museum,very dark
+zircon_museum06_faceted_a01.jpg,zircon_museum06,14.53 ct coffee zircon,Zircon,faceted,museum,
+spinel_museum01_faceted_a01.jpg,spinel_museum01,14.25 ct purple spinel,Spinel,faceted,museum,collection-credit text partly visible
+spinel_museum02_faceted_a01.jpg,spinel_museum02,10.21 ct blue spinel,Spinel,faceted,museum,
+spinel_museum03_faceted_a01.jpg,spinel_museum03,9.52 ct pink spinel,Spinel,faceted,museum,
+spinel_museum04_faceted_a01.jpg,spinel_museum04,55.68 ct red spinel,Spinel,faceted,museum,
+spessartite_museum01_faceted_a01.jpg,spessartite_museum01,"11.67 ct spessartine, Hercules mine",Spessartite,faceted,museum,top view
+spessartite_museum01_faceted_a02.jpg,spessartite_museum01,"11.67 ct spessartine, Hercules mine",Spessartite,faceted,museum,angled; soft focus
+spessartite_museum02_faceted_a01.jpg,spessartite_museum02,"Spessartine gemstones, Little Three Mine",Spessartite,faceted,museum,"group card, individual stones unlabeled, Little Three Mine; heavy zoom processing"
+spessartite_museum03_faceted_a01.jpg,spessartite_museum03,"Spessartine gemstones, Little Three Mine",Spessartite,faceted,museum,"group card, individual stones unlabeled, Little Three Mine; heavy zoom processing"
+spessartite_museum04_faceted_a01.jpg,spessartite_museum04,"Spessartine gemstones, Little Three Mine",Spessartite,faceted,museum,"group card, individual stones unlabeled, Little Three Mine; heavy zoom processing"
+sapphire_blue_museum01_faceted_a01.jpg,sapphire_blue_museum01,"6.68 ct blue sapphire, Kashmir",Sapphire Blue,faceted,museum,"soft focus, cropped edge"
+sapphire_blue_museum02_faceted_a01.jpg,sapphire_blue_museum02,"6.97 ct blue sapphire, Mogok",Sapphire Blue,faceted,museum,
+sapphire_blue_museum03_faceted_a01.jpg,sapphire_blue_museum03,"9.54 ct blue sapphire, Sri Lanka",Sapphire Blue,faceted,museum,looks violet
+sapphire_blue_museum04_faceted_a01.jpg,sapphire_blue_museum04,Ruby and sapphire (corundum) gemstones,Sapphire Blue,faceted,museum,"soft focus; card: ruby and sapphire, no individual colors; label by observed hue; LACM order assumed left to right"
+sapphire_yellow_museum01_faceted_a01.jpg,sapphire_yellow_museum01,40 ct sapphire,Sapphire Yellow,faceted,museum,"NHMLAC 33338; card names no color, observed hue; looks smoky brown"
+sapphire_yellow_museum02_faceted_a01.jpg,sapphire_yellow_museum02,39.72 ct golden sapphire,Sapphire Yellow,faceted,museum,faint card edge top-left
+sapphire_yellow_museum03_faceted_a01.jpg,sapphire_yellow_museum03,Ruby and sapphire (corundum) gemstones,Sapphire Yellow,faceted,museum,"soft focus, glare; card: ruby and sapphire, no individual colors; label by observed hue; LACM order assumed left to right"
+sapphire_purple_museum01_faceted_a01.jpg,sapphire_purple_museum01,30 ct sapphire,Sapphire Purple,faceted,museum,"NHMLAC 52386; card names no color, observed hue; looks pink-magenta"
+sapphire_purple_museum02_faceted_a01.jpg,sapphire_purple_museum02,Ruby and sapphire (corundum) gemstones,Sapphire Purple,faceted,museum,"card: ruby and sapphire, no individual colors; label by observed hue; LACM order assumed left to right"
+sapphire_pink_museum01_faceted_a01.jpg,sapphire_pink_museum01,9.28 ct pink sapphire,Sapphire Pink,faceted,museum,looks purple
+sapphire_pink_museum02_faceted_a01.jpg,sapphire_pink_museum02,6.20 ct Dark Rose sapphire,Sapphire Pink,faceted,museum,fingerprints/smudges on table facet
+ruby_museum01_faceted_a01.jpg,ruby_museum01,2.07 ct ruby,Ruby,faceted,museum,"small stone, low-res crop"
+ruby_museum02_faceted_a01.jpg,ruby_museum02,Ruby and sapphire (corundum) gemstones,Ruby,faceted,museum,"card: ruby and sapphire, no individual colors; label by observed hue; LACM order assumed left to right"
+aquamarine_museum01_faceted_a01.jpg,aquamarine_museum01,75.37 ct aquamarine,Aquamarine,faceted,museum,
+aquamarine_museum02_faceted_a01.jpg,aquamarine_museum02,124.6 ct aquamarine,Aquamarine,faceted,museum,top view
+aquamarine_museum02_faceted_a02.jpg,aquamarine_museum02,124.6 ct aquamarine,Aquamarine,faceted,museum,angled
+morganite_museum01_faceted_a01.jpg,morganite_museum01,461 ct morganite,Morganite,faceted,museum,neighbor stone removed with Clean Up
+morganite_museum02_faceted_a01.jpg,morganite_museum02,107 ct morganite,Morganite,faceted,museum,looks lavender
+tourmaline_museum01_faceted_a01.jpg,tourmaline_museum01,60 ct rubellite,Tourmaline,faceted,museum,NHMLAC 9125
+tourmaline_museum02_faceted_a01.jpg,tourmaline_museum02,20 ct indicolite,Tourmaline,faceted,museum,NHMLAC 33330
+amethyst_museum01_faceted_a01.jpg,amethyst_museum01,70 ct amethyst,Amethyst,faceted,museum,NHMLAC 24313
+amethyst_museum02_faceted_a01.jpg,amethyst_museum02,"254 ct amethyst, Kalomo District, Zambia",Amethyst,faceted,museum,numbered gallery marker 4
+chrysoberyl_museum01_faceted_a01.jpg,chrysoberyl_museum01,80 ct chrysoberyl,Chrysoberyl,faceted,museum,NHMLAC 33450
+chrysoberyl_museum02_faceted_a01.jpg,chrysoberyl_museum02,86.68 ct chrysoberyl,Chrysoberyl,faceted,museum,looks smoky brown
+alexandrite_museum01_faceted_a01.jpg,alexandrite_museum01,50 ct alexandrite,Alexandrite,faceted,museum,"NHMLAC 8107; dark, exposure raised"
+tsavorite_museum01_faceted_a01.jpg,tsavorite_museum01,10 ct tsavorite,Tsavorite,faceted,museum,NHMLAC 33316
+fluorite_museum01_faceted_a01.jpg,fluorite_museum01,"1034 ct fluorite, Illinois",Fluorite,faceted,museum,
+kunzite_museum01_faceted_a01.jpg,kunzite_museum01,1262 ct kunzite,Kunzite,faceted,museum,glare at bottom
+spodumene_museum01_faceted_a01.jpg,spodumene_museum01,362 ct spodumene,Spodumene,faceted,museum,pale blue-green
+emerald_museum01_faceted_a01.jpg,emerald_museum01,"7.86 ct emerald, Muzo",Emerald,faceted,museum,"small, soft focus, shows teal"
+tanzanite_museum01_faceted_a01.jpg,tanzanite_museum01,28.41 ct tanzanite,Tanzanite,faceted,museum,
